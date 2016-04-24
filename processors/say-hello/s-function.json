@@ -1,0 +1,27 @@
+{
+  "name": "say-hello",
+  "runtime": "nodejs4.3",
+  "description": "Recursively polls SQS for task",
+  "customName": false,
+  "customRole": false,
+  "handler": "processors/say-hello/handler.handler",
+  "timeout": 26,
+  "memorySize": 128,
+  "authorizer": {},
+  "custom": {
+    "excludePatterns": [ ]
+  },
+  "endpoints": [],
+  "events": [],
+  "environment": {
+    "SERVERLESS_PROJECT": "${project}",
+    "SERVERLESS_STAGE": "${stage}",
+    "SERVERLESS_REGION": "${region}",
+    "QUEUE_URL": "${queueUrl}",
+    "FUNC_NAME": "${funcName}"
+  },
+  "vpc": {
+    "securityGroupIds": [],
+    "subnetIds": []
+  }
+}
